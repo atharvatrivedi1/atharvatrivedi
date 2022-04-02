@@ -1,0 +1,23 @@
+connector:
+  name: test_connector
+  identifier: test_connector
+  description:
+  orgIdentifier: default
+  projectIdentifier: atharva_test
+  type: Github
+  spec:
+    url: https://github.com/atharvatrivedi1/
+    validationRepo: atharvatrivedi
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: atharvatrivedi1
+          tokenRef: atharva
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: atharva
+    executeOnDelegate: false
+    type: Account
