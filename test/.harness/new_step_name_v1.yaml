@@ -1,0 +1,19 @@
+template:
+    name: New Step Name
+    identifier: new_step_name
+    versionLabel: v1
+    type: Step
+    projectIdentifier: atharva_test
+    orgIdentifier: default
+    spec:
+        type: HarnessApproval
+        spec:
+            approvalMessage: Please review the following information and approve the pipeline progression
+            includePipelineExecutionHistory: true
+            approvers:
+                userGroups:
+                    - account.AccountAdmin
+                minimumCount: 1
+                disallowPipelineExecutor: false
+            approverInputs: []
+        timeout: 1d
