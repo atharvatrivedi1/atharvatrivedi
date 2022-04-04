@@ -1,0 +1,23 @@
+connector:
+  name: at
+  identifier: at
+  description:
+  orgIdentifier: default
+  projectIdentifier: atharva
+  type: Github
+  spec:
+    url: https://github.com/atharvatrivedi1
+    validationRepo: atharvatrivedi
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: atharvatrivedi1
+          tokenRef: att
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: att
+    executeOnDelegate: false
+    type: Account
