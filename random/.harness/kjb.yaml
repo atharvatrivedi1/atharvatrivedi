@@ -1,0 +1,11 @@
+connector:
+  name: kjb
+  identifier: kjb
+  description:
+  orgIdentifier: default
+  projectIdentifier: at_test_proj
+  type: ServiceNow
+  spec:
+    serviceNowUrl: https://ven03171.service-now.com
+    username: admin
+    passwordRef: at_snow_secret
