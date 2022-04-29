@@ -1,0 +1,9 @@
+pipeline:
+    name: wer
+    identifier: wer
+    projectIdentifier: at_test_proj
+    orgIdentifier: default
+    tags: {}
+    template:
+        templateRef: wv
+        versionLabel: q
