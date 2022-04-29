@@ -1,0 +1,11 @@
+connector:
+  name: at_jira_conn
+  identifier: at_jira_conn
+  description:
+  orgIdentifier: default
+  projectIdentifier: at_test_proj
+  type: Jira
+  spec:
+    jiraUrl: https://harness.atlassian.net
+    username: atharva.trivedi@harness.io
+    passwordRef: at_jira_secret
