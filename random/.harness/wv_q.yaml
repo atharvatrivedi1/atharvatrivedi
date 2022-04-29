@@ -1,0 +1,41 @@
+template:
+    name: wv
+    identifier: wv
+    versionLabel: q
+    type: Pipeline
+    projectIdentifier: at_test_proj
+    orgIdentifier: default
+    tags: {}
+    spec:
+        stages:
+            - stage:
+                  name: wev
+                  identifier: wev
+                  description: ""
+                  type: Approval
+                  spec:
+                      execution:
+                          steps:
+                              - step:
+                                    name: ServiceNow Approval
+                                    identifier: serviceNowApproval
+                                    type: ServiceNowApproval
+                                    timeout: 1d
+                                    spec:
+                                        approvalCriteria:
+                                            type: KeyValues
+                                            spec:
+                                                matchAnyCondition: true
+                                                conditions:
+                                                    - key: state
+                                                      operator: equals
+                                                      value: New
+                                        rejectionCriteria:
+                                            type: KeyValues
+                                            spec:
+                                                matchAnyCondition: true
+                                                conditions: []
+                                        connectorRef: kjb
+                                        ticketNumber: INC0081814
+                                        ticketType: INCIDENT
+                  tags: {}
