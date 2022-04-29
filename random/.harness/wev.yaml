@@ -1,0 +1,9 @@
+pipeline:
+    name: wev
+    identifier: wev
+    projectIdentifier: at_test_proj
+    orgIdentifier: default
+    tags: {}
+    template:
+        templateRef: qken
+        versionLabel: v1
