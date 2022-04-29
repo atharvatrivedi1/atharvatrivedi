@@ -1,0 +1,41 @@
+template:
+    name: qken
+    identifier: qken
+    versionLabel: v1
+    type: Pipeline
+    projectIdentifier: at_test_proj
+    orgIdentifier: default
+    tags: {}
+    spec:
+        stages:
+            - stage:
+                  name: wqev
+                  identifier: wqev
+                  description: ""
+                  type: Approval
+                  spec:
+                      execution:
+                          steps:
+                              - step:
+                                    name: Jira Approval
+                                    identifier: jiraApproval
+                                    type: JiraApproval
+                                    timeout: 1d
+                                    spec:
+                                        approvalCriteria:
+                                            type: KeyValues
+                                            spec:
+                                                matchAnyCondition: true
+                                                conditions:
+                                                    - key: Status
+                                                      operator: equals
+                                                      value: Done
+                                        rejectionCriteria:
+                                            type: KeyValues
+                                            spec:
+                                                matchAnyCondition: true
+                                                conditions: []
+                                        connectorRef: at_jira_conn
+                                        issueKey: CDS-34206
+                      serviceDependencies: []
+                  tags: {}
