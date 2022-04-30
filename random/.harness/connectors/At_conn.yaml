@@ -1,0 +1,23 @@
+connector:
+  name: At_conn
+  identifier: At_conn
+  description:
+  orgIdentifier: default
+  projectIdentifier: at_test_proj
+  type: Github
+  spec:
+    url: https://github.com/atharvatrivedi1
+    validationRepo: atharvatrivedi
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: atharvatrivedi1
+          tokenRef: at_git_secret
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: at_git_secret
+    executeOnDelegate: false
+    type: Account
